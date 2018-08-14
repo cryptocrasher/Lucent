@@ -134,7 +134,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("cryptolinux.ddns.net", "cryptolinux.ddns.net"));
+        //vSeeds.push_back(CDNSSeedData("cryptolinux.ddns.net", "cryptolinux.ddns.net"));
 		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
@@ -197,8 +197,8 @@ public:
         vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
         nDefaultPort = 42425;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Northern: 1 day
-        nTargetSpacing = 1 * 60;  // Northern: 1 minute
+        nTargetTimespan = 1 * 60; //
+        nTargetSpacing = 1 * 60;  // 
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
@@ -214,10 +214,10 @@ public:
         assert(hashGenesisBlock == uint256("0x00000859339679035a6a6157756d009f8803feb24488d8ea4733d6810da2acf4"));
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("nort.network", "testnet.node.nort.network"));
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet northern addresses start with 'x' or 'y'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet northern script addresses start with '8' or '9'
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
+        //vSeeds.push_back(CDNSSeedData("", ""));
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); 
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // 
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // 
         // Testnet northern BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
         // Testnet northern BIP32 prvkeys start with 'DRKP'
@@ -256,10 +256,10 @@ public:
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
         strNetworkID = "regtest";
-        pchMessageStart[0] = 0xa1;
-        pchMessageStart[1] = 0xc2;
-        pchMessageStart[2] = 0x73;
-        pchMessageStart[3] = 0xa4;
+        pchMessageStart[0] = 0xa2;
+        pchMessageStart[1] = 0xc1;
+        pchMessageStart[2] = 0x72;
+        pchMessageStart[3] = 0xa1;
         nSubsidyHalvingInterval = 150;
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // Northern: 1 day
