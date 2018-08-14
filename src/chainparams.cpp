@@ -89,11 +89,11 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x25;
-        pchMessageStart[1] = 0x14;
-        pchMessageStart[2] = 0x43;
-        pchMessageStart[3] = 0xb6;
-        vAlertPubKey = ParseHex("005da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d");
+        pchMessageStart[0] = 0x01;
+        pchMessageStart[1] = 0x24;
+        pchMessageStart[2] = 0x02;
+        pchMessageStart[3] = 0xa4;
+        vAlertPubKey = ParseHex("045da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d");
         nDefaultPort = 42424;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Northern starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -119,7 +119,7 @@ public:
 				
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("005da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("045da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
@@ -134,7 +134,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        //vSeeds.push_back(CDNSSeedData("cryptolinux.ddns.net", "cryptolinux.ddns.net"));
+        vSeeds.push_back(CDNSSeedData("cryptolinux.ddns.net", "cryptolinux.ddns.net"));
 		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
@@ -154,7 +154,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
         nPoolMaxTransactions = 3;
-        strSporkKey = "005da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d";
+        strSporkKey = "045da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d";
         
         strObfuscationPoolDummyAddress = "Lg3aLcSeLqbpEsVgoXtDFrpDYDfAsf1qxv";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
@@ -190,10 +190,10 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x28;
-        pchMessageStart[1] = 0x17;
-        pchMessageStart[2] = 0x66;
-        pchMessageStart[3] = 0xb5;
+        pchMessageStart[0] = 0x25;
+        pchMessageStart[1] = 0x13;
+        pchMessageStart[2] = 0x62;
+        pchMessageStart[3] = 0xb1;
         vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
         nDefaultPort = 42425;
         nMinerThreads = 0;
