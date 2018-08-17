@@ -134,7 +134,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        //vSeeds.push_back(CDNSSeedData("cryptolinux.ddns.net", "cryptolinux.ddns.net"));
+        vSeeds.push_back(CDNSSeedData("178.128.176.175", "178.128.176.175"));
 		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
